@@ -14,7 +14,7 @@ set -x
 docker run --rm -it -v "$PWD":/app -w /app qapi/gocker vendor
 
 # compiling natively
-docker run --rm -v "$PWD":/app -w /app qapi/gocker cross
+docker run --rm -v "$PWD":/app -w /app qapi/gocker lambda
 
 
 zip -r lambda.zip main index.js
